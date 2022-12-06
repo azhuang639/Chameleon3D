@@ -14,12 +14,14 @@ public class cubeMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //some issue with the movement here...
         float h = Input.GetAxis("Horizontal") * 5;
         float v = Input.GetAxis("Vertical") * 5;
 
         Vector3 vel = rb.velocity;
         vel.x = h;
         vel.z = v;
+        vel.y = 0;
         rb.velocity = vel;
     }
 }
